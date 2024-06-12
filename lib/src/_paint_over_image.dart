@@ -869,39 +869,39 @@ class ImagePainterState extends State<ImagePainter> {
               );
             },
           ),
-          PopupMenuButton(
-            tooltip: textDelegate.changeBrushSize,
-            surfaceTintColor: Colors.transparent,
-            shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            icon:
-                widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
-            itemBuilder: (_) => [_showRangeSlider()],
-          ),
-          AnimatedBuilder(
-            animation: _controller,
-            builder: (_, __) {
-              if (_controller.canFill()) {
-                return Row(
-                  children: [
-                    Checkbox.adaptive(
-                      value: _controller.shouldFill,
-                      onChanged: (val) {
-                        _controller.update(fill: val);
-                      },
-                    ),
-                    Text(
-                      textDelegate.fill,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    )
-                  ],
-                );
-              } else {
-                return const SizedBox();
-              }
-            },
-          ),
+          // PopupMenuButton(
+          //   tooltip: textDelegate.changeBrushSize,
+          //   surfaceTintColor: Colors.transparent,
+          //   shape: ContinuousRectangleBorder(
+          //     borderRadius: BorderRadius.circular(20),
+          //   ),
+          //   icon:
+          //       widget.brushIcon ?? Icon(Icons.brush, color: Colors.grey[700]),
+          //   itemBuilder: (_) => [_showRangeSlider()],
+          // ),
+          // AnimatedBuilder(
+          //   animation: _controller,
+          //   builder: (_, __) {
+          //     if (_controller.canFill()) {
+          //       return Row(
+          //         children: [
+          //           Checkbox.adaptive(
+          //             value: _controller.shouldFill,
+          //             onChanged: (val) {
+          //               _controller.update(fill: val);
+          //             },
+          //           ),
+          //           Text(
+          //             textDelegate.fill,
+          //             style: Theme.of(context).textTheme.bodyMedium,
+          //           )
+          //         ],
+          //       );
+          //     } else {
+          //       return const SizedBox();
+          //     }
+          //   },
+          // ),
           const Spacer(),
           IconButton(
             tooltip: textDelegate.undo,
